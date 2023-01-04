@@ -16,7 +16,7 @@ class Main
         $this->instance1 = GameEngine::getInstance();
         $this->instance2 = GameEngine::getInstance();
 
-        print_r($this->instance1 == $this->instance2); // True
+        print_r($this->instance1 === $this->instance2 ? "YES" : "NO"); // YES
     }
 }
 

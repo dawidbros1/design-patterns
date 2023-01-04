@@ -9,7 +9,7 @@ class GameEngine
    private int $hp = 100;
    private string $characterName = "";
 
-   private static GameEngine $instance;
+   private static ? GameEngine $instance = null;
    private function __construct()
    {
       // private constructor prevents creating an object directly with the new operator
@@ -17,7 +17,11 @@ class GameEngine
 
    public static function getInstance(): GameEngine
    {
-      return GameEngine::$instance ?? new GameEngine();
+      if (GameEngine::$instance == null) {
+         GameEngine::$instance = new GameEngine();
+      }
+
+      return GameEngine::$instance;
    }
 
    private function __clone()
