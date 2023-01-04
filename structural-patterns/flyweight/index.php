@@ -19,8 +19,8 @@ class Main
         $archer = new Archer(0, 0);
         $archer2 = new Archer(0, 0);
 
-        dump($archer === $archer2 ? "TAK" : "NIE"); // NIE
-        dump($archer->getStats() === $archer2->getStats() ? "TAK" : "NIE"); // TAK
+        dump($archer === $archer2 ? "YES" : "NO"); // NO
+        dump($archer->getStats() === $archer2->getStats() ? "YES" : "NO"); // YES
     }
 }
 
